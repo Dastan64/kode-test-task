@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/kode-test-task/static/css/main.f77fbd95.css",
+    "main.js": "/kode-test-task/static/js/main.02f56b00.js",
+    "static/media/phone-icon.svg": "/kode-test-task/static/media/phone-icon.9fc30247dae9d263fb9527cc13edca93.svg",
+    "static/media/sort-icon.svg": "/kode-test-task/static/media/sort-icon.abdf8731f317c47b7df6539899f5caf4.svg",
+    "static/media/star-icon.svg": "/kode-test-task/static/media/star-icon.9e4ac22f4832ac3dd9c8ee1965b0152a.svg",
+    "static/media/loupe-icon.svg": "/kode-test-task/static/media/loupe-icon.cc962da48170bf30e5f2.svg",
+    "index.html": "/kode-test-task/index.html",
+    "static/media/chevron-left.svg": "/kode-test-task/static/media/chevron-left.6f6f1d309cd8bb9b847ba39c33c3a9e1.svg",
+    "static/media/close-icon.svg": "/kode-test-task/static/media/close-icon.52dbcbd2ac79d1c48d8cc082efff7f01.svg",
+    "main.f77fbd95.css.map": "/kode-test-task/static/css/main.f77fbd95.css.map",
+    "main.02f56b00.js.map": "/kode-test-task/static/js/main.02f56b00.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f77fbd95.css",
+    "static/js/main.02f56b00.js"
+  ]
+}
