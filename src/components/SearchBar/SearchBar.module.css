@@ -1,0 +1,41 @@
+.searchBar {
+    position: relative;
+}
+
+.searchInput {
+    display: block;
+    margin-top: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    padding: 10px 14px 10px 44px;
+    color: var(--black);
+    caret-color: var(--primary);
+    font-size: 0.9375rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 20px;
+    background: var(--lightGrey) url("../../assets/images/icons/loupe-icon.svg") no-repeat 14px 50%;
+}
+
+.searchInput:focus, .searchInput:focus-visible {
+    outline: 2px solid var(--primary);
+}
+
+.searchInput::-webkit-input-placeholder {
+    color: var(--inputText);
+}
+
+.searchSortButton {
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+}
+
+.searchSortButton:focus-visible {
+    outline: 2px solid var(--primary);
+}

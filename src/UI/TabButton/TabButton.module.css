@@ -1,0 +1,26 @@
+.tabButton {
+    cursor: pointer;
+    padding: 8px 12px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background-color: transparent;
+    color: var(--darkGrey);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.3;
+}
+
+.tabButton:focus-visible {
+    color: var(--black);
+    outline: 2px solid var(--primary);
+}
+
+.tabButton:hover {
+    color: var(--black);
+    border-bottom: 2px solid var(--primary);
+}
+
+.tabButtonActive {
+    color: var(--black);
+    border-bottom: 2px solid var(--primary);
+}

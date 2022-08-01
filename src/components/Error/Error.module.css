@@ -1,0 +1,42 @@
+.errorSection {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.errorSection figure img {
+    width: 56px;
+    height: 56px;
+}
+
+.errorSection h2 {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 1.06rem;
+    line-height: 1.3;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.errorSection p {
+    color: var(--darkGrey);
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.errorSection p:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.errorSection button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
