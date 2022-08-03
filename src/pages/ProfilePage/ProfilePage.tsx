@@ -13,21 +13,25 @@ import avatarPlaceholder from '../../assets/images/avatarPlaceholder.png';
 import { formatBirthDate } from '../../utils/formatBirthDate';
 import { calculateAge } from '../../utils/calculateAge';
 import { formatAgeDeclination } from '../../utils/formatAgeDeclination';
+import { Employee, ProfilePageProps } from "../../types/types";
 
-const ProfilePage = ({ employees }) => {
-    const [employee, setEmployee] = useState({});
+const ProfilePage = ({ employees }: ProfilePageProps) => {
+    const [employee, setEmployee] = useState<Employee | any>({});
     const [isAvatarLoaded, setIsAvatarLoaded] = useState(false);
     const { id } = useParams();
+
+    useEffect(() => {
+        const specificPerson = employees.find(employee => employee.id === id);
+        if (specificPerson) {
+            setEmployee(specificPerson);
+        }
+    }, [employees, id])
 
     const { birthday, avatarUrl, firstName, lastName, userTag, position, phone } = employee;
 
     const profileImageSrc = isAvatarLoaded ? avatarUrl : avatarPlaceholder;
     const age = calculateAge(birthday);
 
-    useEffect(() => {
-        const specificPerson = employees.find(employee => employee.id === id);
-        setEmployee(specificPerson);
-    }, [employees, id])
 
     return (
         <>

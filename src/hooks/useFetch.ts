@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
+import { Employee } from "../types/types";
 
-const useFetch = (url) => {
-    const [employees, setEmployees] = useState([]);
+const useFetch = (url: string) => {
+    const [employees, setEmployees] = useState<Employee[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [hasFailed, setHasFailed] = useState(false);
 

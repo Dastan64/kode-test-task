@@ -1,4 +1,4 @@
-export const formatBirthDate = (date, type) => {
+export const formatBirthDate = (date: string, type?: string) => {
     const dateObj = new Date(date);
     const monthsArray = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
     const year = dateObj.getFullYear();

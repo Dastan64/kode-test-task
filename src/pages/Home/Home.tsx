@@ -3,7 +3,7 @@ import React from 'react';
 import styled from './Home.module.css';
 
 //Hooks
-import { useEmployees} from '../../hooks/useSortedEmployees';
+import { useEmployees } from '../../hooks/useSortedEmployees';
 import { useEffect, useState } from 'react';
 
 //Images
@@ -21,10 +21,11 @@ import Error from '../../components/Error/Error';
 import Popup from '../../components/Popup/Popup';
 import RadioButton from '../../UI/RadioButton/RadioButton';
 import TabsList from '../../components/TabsList/TabsList';
+import { Employee, HomeProps } from "../../types/types";
 
-const Home = ({ employees, isPopupOpen, setIsPopupOpen, hasFailed, isLoading }) => {
+const Home = ({ employees, isPopupOpen, setIsPopupOpen, hasFailed, isLoading }: HomeProps) => {
     const [filter, setFilter] = useState({ sort: '', query: '' })
-    const [filtered, setFiltered] = useState([]);
+    const [filtered, setFiltered] = useState<Employee[]>([]);
 
     useEffect(() => {
         if (employees.length > 0) {
@@ -34,7 +35,7 @@ const Home = ({ employees, isPopupOpen, setIsPopupOpen, hasFailed, isLoading }) 
 
     const sortedAndSearchedEmployees = useEmployees(filtered, filter.sort, filter.query);
 
-    const sortList = (sort) => {
+    const sortList = (sort: string) => {
         setFilter({ ...filter, sort, })
         setIsPopupOpen(false);
     }

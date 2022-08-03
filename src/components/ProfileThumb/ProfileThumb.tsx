@@ -9,14 +9,18 @@ import avatarPlaceholder from '../../assets/images/avatarPlaceholder.png';
 //Utils
 import { formatBirthDate } from '../../utils/formatBirthDate';
 
-const ProfileThumb = ({ employee, filter }) => {
-    const { avatarUrl, firstName, lastName, userTag, position, birthday } = employee ?? {};
+//Interfaces
+import { ProfileThumbProps } from "../../types/types";
+
+const ProfileThumb = ({ employee, filter }: ProfileThumbProps) => {
+    const { avatarUrl, firstName, lastName, userTag, position, birthday, id } = employee ?? {};
     const [isAvatarLoaded, setIsAvatarLoaded] = useState(false);
     const profileImageSrc = isAvatarLoaded ? avatarUrl : avatarPlaceholder;
+    
     return (
         <article className={styled.profileThumb}>
             <div className={styled.profileThumbContainer}>
-                <Link to={`/user/${employee.id}`}>
+                <Link to={`/user/${id}`}>
                     <figure>
                         <img className={styled.profileImage} src={profileImageSrc} alt=""
                              onError={() => setIsAvatarLoaded(false)}/>

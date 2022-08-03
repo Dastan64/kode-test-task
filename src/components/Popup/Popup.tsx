@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from './Popup.module.css';
 import closeIcon from "../../assets/images/icons/close-icon.svg";
+import { PopupProps } from '../../types/types';
 
-const Popup = ({ isOpen, setIsOpen, children }) => {
+const Popup = ({ isOpen, setIsOpen, children }: PopupProps) => {
     const handleClose = () => setIsOpen(!isOpen);
 
     return (

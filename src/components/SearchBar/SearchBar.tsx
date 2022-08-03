@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import styled from './SearchBar.module.css';
 
 //Icons
 import sortIcon from '../../assets/images/icons/sort-icon.svg';
 
-const SearchBar = ({ setIsPopupOpen, filter, setFilter }) => {
+//Interfaces
+import { SearchBarProps } from "../../types/types";
+
+const SearchBar = ({ setIsPopupOpen, filter, setFilter }: SearchBarProps) => {
     const handleClick = () => setIsPopupOpen(true);
-    const handleChange = (event) => setFilter({...filter, query: event.target.value});
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => setFilter({ ...filter, query: event.target.value });
 
     return (
         <header>
