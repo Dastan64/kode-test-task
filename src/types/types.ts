@@ -37,11 +37,11 @@ export interface SearchBarProps {
 export interface PopupProps {
     isOpen: boolean;
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-    children: JSX.Element | JSX.Element[];
+    children: React.ReactNode;
 }
 
 export interface ErrorProps {
-    children: JSX.Element | JSX.Element[];
+    children: React.ReactNode;
 }
 
 export interface Tab {
