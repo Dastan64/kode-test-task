@@ -5,6 +5,7 @@
 - Create React App
 - React Router
 - Axios (но я предпочёл Fetch API)
+- _Добавил TypeScript_
 
 ## Функциональные требования
 
